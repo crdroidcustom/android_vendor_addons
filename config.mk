@@ -164,7 +164,8 @@ PRODUCT_PACKAGES += \
     FontSonySketchOverlay \
     FontStoropiaOverlay \
     FontSurferOverlay \
-    FontUbuntuOverlay
+    FontUbuntuOverlay \
+    ClockFontMotorola
 
 # Icon Packs
 PRODUCT_PACKAGES += \
