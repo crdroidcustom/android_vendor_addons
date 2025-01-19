@@ -16,6 +16,11 @@ include $(call all-subdir-makefiles,$(LOCAL_PATH))
 
 PRODUCT_PACKAGE_OVERLAYS += vendor/addons/overlay/common
 
+ifeq ($(WITH_GMS),true)
+PRODUCT_PACKAGES += \
+    SystemUIClocks-Weather
+endif
+
 ifeq ($(TARGET_HAS_UDFPS),true)
 PRODUCT_PACKAGES += \
     UdfpsIcons \
@@ -283,34 +288,11 @@ PRODUCT_PACKAGES += \
     NavbarSammyOverlay \
     NavbarTecnoCamonOverlay
 
-# Notification Themes
-PRODUCT_PACKAGES += \
-    NotifCyberPunk \
-    NotifDuoline \
-    NotifFluid \
-    NotifIOS \
-    NotifLayers
-
-# Power Menu Themes
-PRODUCT_PACKAGES += \
-    PowerCyberPunk \
-    PowerDuoline \
-    PowerFluid \
-    PowerIOS \
-    PowerLayers
-
 # QS UI Style
 PRODUCT_PACKAGES += \
     A11QSUI \
     QSOutline \
-    QSTwoToneAccent \
-    QSTwoToneAccentTrans \
-    QSShaded \
-    QSCyberPunk \
-    QSNeumorph \
-    QSReflected \
-    QSSurround \
-    QSThin
+    QSTwoToneAccent
 
 # Signal Icons
 PRODUCT_PACKAGES += \
